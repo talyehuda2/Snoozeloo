@@ -1,9 +1,11 @@
 package com.doublelift.snoozeloov2_nove24project
 
+import android.app.Activity
+import android.app.KeyguardManager
 import android.content.Context
-import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -14,18 +16,30 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.doublelift.snoozeloov2_nove24project.presentaion.alarmsList.AlarmsListViewModel
-import com.doublelift.snoozeloov2_nove24project.presentaion.ui.theme.SnoozelooV2Nove24ProjectTheme
+import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList.AlarmsListViewModel
+import com.doublelift.snoozeloov2_nove24project.presentaion.navigation.NavigationRoot
+import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozelooV2Nove24ProjectTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
     private val viewModel by viewModel<AlarmsListViewModel>()
 
+    private lateinit var navController: NavHostController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        this.turnScreenOnAndKeyguardOff()
+
+        setShowWhenLocked(true)
+        setTurnScreenOn(true)
+        with(getSystemService(KEYGUARD_SERVICE) as KeyguardManager) {
+            requestDismissKeyguard(this@MainActivity, null)
+        }
 
         installSplashScreen().apply {
             setKeepOnScreenCondition{
@@ -33,10 +47,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-//        val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
-//            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-//        }
-//        applicationContext.startActivity(intent)
+        println("MainActivity: onCreate Intent Data = ${intent?.data}")
 
         setContent {
             SnoozelooV2Nove24ProjectTheme {
@@ -44,7 +55,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = rememberNavController()
+                    navController = rememberNavController()
                     NavigationRoot(
                         navController = navController
                     )
@@ -52,8 +63,30 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+    }
 }
 
+
+fun Activity.turnScreenOnAndKeyguardOff() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+        setShowWhenLocked(true)
+        setTurnScreenOn(true)
+    } else {
+        window.addFlags(
+            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+        )
+    }
+    with(getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            requestDismissKeyguard(this@turnScreenOnAndKeyguardOff, null)
+        }
+    }
+}
 
 @Preview(showBackground = true)
 @Composable

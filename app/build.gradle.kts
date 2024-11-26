@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
+    alias(libs.plugins.compose.compiler)
     id("kotlin-kapt")
 }
 
@@ -10,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.doublelift.snoozeloov2_nove24project"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -58,6 +60,7 @@ configurations.all {
 
 dependencies {
     implementation (libs.runtime)
+    implementation(libs.androidx.lifecycle.process)
     kapt (libs.compiler.v100)
 
     // AndroidX Core
@@ -75,8 +78,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.foundation)
     implementation(platform(libs.androidx.compose.bom))
-//    implementation(platform(libs.androidx.compose.bom.vbomversion))
-
+    implementation(libs.kotlinx.serialization.json)
 
     //Koin
     implementation(libs.koin.core)
