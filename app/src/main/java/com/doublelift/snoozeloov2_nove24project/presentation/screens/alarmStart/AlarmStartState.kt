@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmStart
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmStart
 
 data class AlarmStartState(
     val title: String = "",

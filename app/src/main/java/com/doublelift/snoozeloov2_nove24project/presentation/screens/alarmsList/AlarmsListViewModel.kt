@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmsList
 
 import android.content.Context
 import androidx.compose.runtime.getValue

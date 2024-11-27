@@ -1,14 +1,14 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.navigation
+package com.doublelift.snoozeloov2_nove24project.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navDeepLink
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmStart.AlarmStartState
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmStart.AlarmsStartScreenRoot
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList.AlarmsListScreenRoot
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alramAdd.AlarmsAddScreenRoot
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmStart.AlarmStartState
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmStart.AlarmsStartScreenRoot
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmsList.AlarmsListScreenRoot
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alramAdd.AlarmsAddScreenRoot
 import kotlinx.serialization.Serializable
 
 const val DEEP_LINK_DOMAIN = "double_lift.com"

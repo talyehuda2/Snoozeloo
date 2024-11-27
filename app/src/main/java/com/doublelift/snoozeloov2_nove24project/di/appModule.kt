@@ -1,12 +1,12 @@
 package com.doublelift.snoozeloov2_nove24project.di
 
 import androidx.room.Room
-import com.doublelift.snoozeloov2_nove24project.presentaion.app.SnoozelooApp
+import com.doublelift.snoozeloov2_nove24project.presentation.app.SnoozelooApp
 import com.doublelift.snoozeloov2_nove24project.data.database.AlarmDatabase
 import com.doublelift.snoozeloov2_nove24project.data.repository.AlarmRepositoryImpl
 //import com.doublelift.snoozeloov2_nove24project.presentaion.alarmStart.AlarmStartViewModel
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList.AlarmsListViewModel
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alramAdd.AlarmAddViewModel
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmsList.AlarmsListViewModel
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alramAdd.AlarmAddViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module

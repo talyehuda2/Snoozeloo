@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalFoundationApi::class)
 
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alramAdd
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alramAdd
 
 
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -47,18 +47,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.doublelift.snoozeloov2_nove24project.R
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeBlue
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeDisableGrey
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeGrey
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeLightGrey
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozelooV2Nove24ProjectTheme
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.AlarmUtils.timeLeftUntil
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.AlarmUtils.toIntOrNull
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeBlue
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeDisableGrey
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeGrey
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeLightGrey
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozelooV2Nove24ProjectTheme
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.AlarmUtils.timeLeftUntil
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.AlarmUtils.toIntOrNull
 import org.koin.androidx.compose.koinViewModel
-import org.threeten.bp.Duration
-import org.threeten.bp.LocalDateTime
-import org.threeten.bp.LocalTime
-import java.util.Locale
 
 @Composable
 

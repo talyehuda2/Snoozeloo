@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alramAdd
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alramAdd
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,10 +7,8 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.doublelift.snoozeloov2_nove24project.domain.Alarm
-import com.doublelift.snoozeloov2_nove24project.domain.AlarmItem
-import com.doublelift.snoozeloov2_nove24project.data.AndroidAlarmScheduler
 import com.doublelift.snoozeloov2_nove24project.data.repository.AlarmRepositoryImpl
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.AlarmUtils.toIntOrNull
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.AlarmUtils.toIntOrNull
 import kotlinx.coroutines.launch
 
 class AlarmAddViewModel(
@@ -19,9 +17,6 @@ class AlarmAddViewModel(
 
     var state by mutableStateOf(AlarmAddState())
         private set
-
-    private var scheduler: AndroidAlarmScheduler? = null
-    private var alarmItem: AlarmItem? = null
 
     init {
         viewModelScope.launch {

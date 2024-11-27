@@ -1,10 +1,9 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.utils
+package com.doublelift.snoozeloov2_nove24project.presentation.utils
 
 import androidx.compose.foundation.text.input.TextFieldState
 import java.time.Duration
 import java.time.LocalDateTime
 import java.time.LocalTime
-import java.util.Locale
 
 object AlarmUtils {
     fun timeLeftUntil(targetHour: Int, targetMinute: Int): String {

@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmsList
 
 
 import android.content.res.Configuration
@@ -60,13 +60,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.doublelift.snoozeloov2_nove24project.R
 import com.doublelift.snoozeloov2_nove24project.domain.Alarm
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.Montserrat
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeBlue
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeLightBlue
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozeLightGrey
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozelooV2Nove24ProjectTheme
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.AlarmUtils.timeLeftUntil
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.TextFormatters.formatTimeFor12HoursFormat
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.Montserrat
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeBlue
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeLightBlue
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozeLightGrey
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozelooV2Nove24ProjectTheme
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.AlarmUtils.timeLeftUntil
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.TextFormatters.formatTimeFor12HoursFormat
 import kotlinx.coroutines.delay
 import org.koin.androidx.compose.koinViewModel
 

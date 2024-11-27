@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
-        android:name=".presentaion.app.SnoozelooApp"
+        android:name=".presentation.app.SnoozelooApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -42,7 +42,7 @@
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
-        <receiver android:name=".presentaion.utils.AlarmReceiver" />
+        <receiver android:name=".presentation.utils.AlarmReceiver" />
         <receiver
             android:name=".data.BootCompletedReceiver"
             android:exported="false">

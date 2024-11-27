@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.theme
+package com.doublelift.snoozeloov2_nove24project.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

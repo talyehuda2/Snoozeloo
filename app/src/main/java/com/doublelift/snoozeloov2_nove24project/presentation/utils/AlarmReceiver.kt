@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.utils
+package com.doublelift.snoozeloov2_nove24project.presentation.utils
 
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -12,7 +12,7 @@ import androidx.core.content.getSystemService
 import androidx.core.net.toUri
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.doublelift.snoozeloov2_nove24project.presentaion.navigation.DEEP_LINK_DOMAIN
+import com.doublelift.snoozeloov2_nove24project.presentation.navigation.DEEP_LINK_DOMAIN
 import com.doublelift.snoozeloov2_nove24project.MainActivity
 import com.doublelift.snoozeloov2_nove24project.R
 

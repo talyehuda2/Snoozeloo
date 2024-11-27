@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import com.doublelift.snoozeloov2_nove24project.domain.AlarmItem
 import com.doublelift.snoozeloov2_nove24project.domain.AlarmScheduler
-import com.doublelift.snoozeloov2_nove24project.presentaion.utils.AlarmReceiver
+import com.doublelift.snoozeloov2_nove24project.presentation.utils.AlarmReceiver
 import java.time.ZoneId
 
 class AndroidAlarmScheduler(

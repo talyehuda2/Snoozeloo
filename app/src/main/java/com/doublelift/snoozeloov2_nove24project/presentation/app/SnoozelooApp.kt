@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.app
+package com.doublelift.snoozeloov2_nove24project.presentation.app
 
 import android.app.Application
 import android.app.NotificationChannel

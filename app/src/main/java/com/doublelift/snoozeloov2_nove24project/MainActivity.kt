@@ -18,9 +18,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.doublelift.snoozeloov2_nove24project.presentaion.screens.alarmsList.AlarmsListViewModel
-import com.doublelift.snoozeloov2_nove24project.presentaion.navigation.NavigationRoot
-import com.doublelift.snoozeloov2_nove24project.presentaion.theme.SnoozelooV2Nove24ProjectTheme
+import com.doublelift.snoozeloov2_nove24project.presentation.screens.alarmsList.AlarmsListViewModel
+import com.doublelift.snoozeloov2_nove24project.presentation.navigation.NavigationRoot
+import com.doublelift.snoozeloov2_nove24project.presentation.theme.SnoozelooV2Nove24ProjectTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
@@ -62,11 +62,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
     }
 }
 

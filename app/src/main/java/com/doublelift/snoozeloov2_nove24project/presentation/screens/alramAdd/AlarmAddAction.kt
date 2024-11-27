@@ -1,4 +1,4 @@
-package com.doublelift.snoozeloov2_nove24project.presentaion.screens.alramAdd
+package com.doublelift.snoozeloov2_nove24project.presentation.screens.alramAdd
 
 sealed interface AlarmAddAction {
     data object OnSaveClick : AlarmAddAction
