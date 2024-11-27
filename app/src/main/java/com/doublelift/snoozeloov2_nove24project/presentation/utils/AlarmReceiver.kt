@@ -27,7 +27,7 @@ class AlarmReceiver : BroadcastReceiver() {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             data = "https://$DEEP_LINK_DOMAIN/$title/$hours/$minutes".toUri()
         }
-
+        println("live: context?.startActivity. context: $context")
         context?.startActivity(alarmIntent)
 
         context?.let {
@@ -71,9 +71,8 @@ class AlarmReceiver : BroadcastReceiver() {
 
         val notificationManager = context.getSystemService<NotificationManager>()!!
         // checks that the app on background and the screen is still on
-        if (!isAppInForeground() && context.isScreenOn()) {
-            notificationManager.notify(id, notification)
-        }
+        notificationManager.notify(id, notification)
+
     }
 
 

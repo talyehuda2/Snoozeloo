@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-11-26T21:36:18.000706700Z">
+        <DropdownSelection timestamp="2024-11-27T15:55:45.550848Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\talye\.android\avd\S10_API_30.avd" />
